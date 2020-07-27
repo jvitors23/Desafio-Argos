@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .btn{
+            color: white;
+            background-color: black;
+            border: white 2px solid;
+            padding: 9px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .btn:hover{
+            color: black;
+            background-color: white;
+            border: white 2px solid;
+            padding: 9px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: 500ms;
+        }
+
+    </style>
+</head>
+<body bgcolor="black">
+    <div align="center">
+        <% if(!estado){ %>
+            <img src="https://i.imgur.com/Npg3M4k.png" style="display: block; margin-top: 75px;">
+            <form action="/ligar" method="POST" style="display: inline;">
+                <button class="btn" style="margin-top: 35px;">LIGAR LED</button>
+            </form>
+        <% }else{ %>
+            <img src="https://i.imgur.com/9cXOyu9.png" style="display: block;">
+            <form action="/desligar" method="POST" style="display: inline;">
+                <button class="btn">DESLIGAR LED</button>
+            </form>
+        <% } %>            
+
+    </div>    
+</body>
+</html>
